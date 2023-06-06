@@ -444,6 +444,224 @@ footer{
     }
 }
 
+/*  --- CONTACT---  */
+.contact{
+    background: #fcfcf7;
+}
+.title-contact{
+    padding-top: 100px;
+    margin: 20px;
+    font-family: 'krona one', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    
+}
+.para-contact1{
+    margin-left: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+.img-contact{
+    width: 0;
+    height: 0;
+    visibility : hidden;
+}
+.body-form{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.input-group {
+    position: relative;
+    margin-top: 0;
+    padding-top: 0;
+    padding: 5px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.input {
+    border: solid 1.5px #21211f;
+    border-radius: 10px;
+    background: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #21211f;
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+}
+.user-label {
+    position: absolute;
+    left: 15px;
+    color: #21211f;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4,0,0.2,1);
+}
+.input:focus, input:valid {
+    outline: none;
+    border: 1.5px solid #ffb700;
+}
+.input:focus ~ label, input:valid ~ label {
+    transform: translateY(-50%) scale(0.8);
+    background-color: #fcfcf7;
+    padding: 0 .2em;
+    color: #ffb700;
+}
+button {
+    padding: 0.8em 1.8em;
+    border: 2px solid #ffb700;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #21211f;
+    margin: 10px;
+    margin-left: 100px;
+}
+   
+button::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #ffb700;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+   
+button:hover::before {
+    width: 105%;
+}
+button:hover {
+    color: #111;
+}
 
-
-
+@media screen and (min-width: 768px){
+    .title-contact{
+        padding-top: 200px;
+        margin-left: 100px;
+        margin-bottom: 0;
+        font-family: 'krona one', sans-serif;
+        font-size: 35px;
+        text-align: left;
+    }
+    .para-contact1{
+        margin-left: 100px;
+        font-size: 18px;
+        text-align: left;
+    }
+    aside{
+        float: right;
+        clear: right;
+        margin-right: 100px;
+    }
+    .img-contact{
+        width: 600px;
+        height: 400px;
+        visibility : visible;
+    }
+    .input {
+        border: solid 1.5px #21211f;
+        border-radius: 10px;
+        background: none;
+        width: 400px; 
+        padding: 1rem;
+        font-size: 1rem;
+        color: #21211f;
+        transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+    }
+    .input-group {
+        position: relative;
+        margin-top: 0;
+        padding-top: 0;
+        padding: 5px;
+        margin-left: 100px;
+        display: flex;
+        flex-direction: column;
+    }
+    button {
+        padding: 0.8em 1.8em;
+        border: 2px solid #ffb700;
+        position: relative;
+        overflow: hidden;
+        background-color: transparent;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 16px;
+        transition: .3s;
+        z-index: 1;
+        font-family: inherit;
+        color: #21211f;
+        margin: 10px;
+        margin-left: 250px;
+    }
+}
+@media screen and (min-width: 1600px){
+    .title-contact{
+        padding-top: 200px;
+        margin-left: 100px;
+        margin-bottom: 0;
+        font-family: 'krona one', sans-serif;
+        font-size: 35px;
+        text-align: left;
+    }
+    .para-contact1{
+        margin-left: 100px;
+        font-size: 18px;
+        text-align: left;
+    }
+    aside{
+        float: right;
+        clear: right;
+        margin-right: 300px;
+    }
+    .img-contact{
+        width: 600px;
+        height: 400px;
+        visibility : visible;
+    }
+    .input {
+        border: solid 1.5px #21211f;
+        border-radius: 10px;
+        background: none;
+        width: 500px; 
+        padding: 1rem;
+        font-size: 1rem;
+        color: #21211f;
+        transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+    }
+    .input-group {
+        position: relative;
+        margin-top: 0;
+        padding-top: 0;
+        padding: 5px;
+        margin-left: 150px;
+        display: flex;
+        flex-direction: column;
+    }
+    button {
+        padding: 0.8em 1.8em;
+        border: 2px solid #ffb700;
+        position: relative;
+        overflow: hidden;
+        background-color: transparent;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 16px;
+        transition: .3s;
+        z-index: 1;
+        font-family: inherit;
+        color: #21211f;
+        margin: 10px;
+        margin-left: 350px;
+    }
+}
