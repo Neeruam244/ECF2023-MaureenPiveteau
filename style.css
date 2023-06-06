@@ -6,31 +6,31 @@ html body{
 }
 /* ---NAVBAR--- */ 
     .logo{
-        margin-left: 20px;
-        margin-right: 20px;
-        width: 100px;
-        height: 100px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 80px;
+        height: 80px;
       }
       .navbar {
         z-index: 2;
         background: #21211f;
         display: flex;
-        font-size: 11px;
+        font-size: 10px;
         position: fixed;
         top: 0;
-        padding-bottom: 10px;
+        text-transform: uppercase;
       }
       .nav-list{
         display: inline-flex;
         padding-top: 20px;
-        padding-right: 65px;
-        padding-left:0;
+        padding-right: 45px;
+        padding-left:5px;
         font-family: 'barlow', sans-serif;
-        text-align: center;
       }
       .nav-list li{
-        padding: 5px;
+        text-align: center;
         list-style: none;
+        padding-right: 10px;
       }
       
     @media screen and (min-width: 768px){
@@ -41,27 +41,28 @@ html body{
         }
         .logo{
           margin-left: 100px;
-          margin-right: 300px;
+          margin-right: 180px;
           width: 200px;
           height: 150px;
         }
         .navbar {
           z-index: 2;
           display: flex;
-          font-size: 20px;
-          font-weight: 600;
+          font-size: 15px;
+          text-transform: uppercase;
           position: fixed;
-          padding-bottom: 10px;
+        }
+        .header-right-wrap{
+            display: inline-flex; 
+            font-family: 'barlow', sans-serif;
+            margin: 20px;
+            margin-right: 90px;
         }
         .nav-list{
-          display: inline-flex;
-          margin-left: 250px;
-          margin-right: 100px;
-          font-family: 'barlow', sans-serif;
+         padding:20px;
         }
         .nav-list li{
-          padding: 30px;
-          padding-right:10px;
+          padding: 18px;  
           list-style: none;
           text-align: center;
           vertical-align: middle;
@@ -70,32 +71,35 @@ html body{
     @media screen and (min-width: 1600px){
         .logo{
             margin-left: 100px;
-            margin-right: 300px;
+            margin-right: 364px;
             width: 200px;
             height: 170px;
           }
-        .nav-list{
-            display: inline-flex;
-            padding-top: 20px;
-            margin-left: 650px;
-            margin-right: 300px;
+        .header-right-wrap{
+            display: inline-flex; 
             font-family: 'barlow', sans-serif;
+            margin: 20px;
+            margin-right: 450px;
+        }
+        .nav-list{
+            padding: 25px;
           }
-          .nav-list li{
-            padding-right: 10px;
+        .nav-list li{
+            padding-right: 18px;
             list-style: none;
             text-align: center;
             vertical-align: middle;
           }
       }
 
-      .nav-list li a{
+    .nav-list li a{
         text-decoration: none;
         color: #fcfcf7;
       }
       .nav-list a:hover{
         color: #ffb700;
       }
+
 
 /* ---FOOTER--- */ 
 footer{
@@ -235,7 +239,7 @@ footer{
 
 /*  --- SERVICES --- */
 .title-service{
-    padding-top: 120px;
+    padding-top: 20px;
     font-family: 'krona one', sans-serif;
     font-size: 25px;
     margin: 10px;
@@ -262,10 +266,12 @@ footer{
     font-size: 0px;
  }
 .title-services{
-    margin: 10px;
     font-family: 'krona one', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
+    background: #ffb700;
+    margin: 0;
+    padding: 10px;
 }
 .h2title{
     font-family: 'krona one', sans-serif;
@@ -297,9 +303,9 @@ footer{
 
 @media screen and (min-width: 768px){
     .title-service{
-        padding-top: 200px;
+        padding-top: 30px;
         font-family: 'krona one', sans-serif;
-        font-size: 40px;
+        font-size: 30px;
         margin-left: 100px;
         text-align: left;
     }
@@ -322,7 +328,8 @@ footer{
        visibility: visible;
     }
     .title-services{
-        padding: 20px;
+        padding : 30px;
+        margin: 0;
         font-family: 'krona one', sans-serif;
         font-size: 25px;
         text-align: center;
@@ -338,18 +345,18 @@ footer{
     }
     .mecanique{
         padding: 50px;
-        padding-bottom: 100px;
+        padding-bottom: 50px;
         margin-right: 50px;
     }
     .carrosserie{
         background: #ffb700;
         padding: 50px;
         padding-right: 100px;
-        padding-bottom: 100px;
+        padding-bottom: 50px;
     }
     .entretien{
         padding: 50px;
-        padding-bottom: 100px;
+        padding-bottom: 50px;
         margin-right: 50px;
     }
     .photos-services{
@@ -361,7 +368,81 @@ footer{
 }
 
 
-
+/*   --- BIENVENUE ---  */
+.title-bienvenue{
+    padding: 10px;
+    font-family: 'krona one', sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+.img-about{
+    width: 250px;
+    height: 150px;
+    margin-top: 90px;
+    margin-left: 70px;
+}
+.para-about{
+    margin: 30px;
+    text-align:justify;
+    font-size: 15px;
+}
+@media screen and (min-width: 768px){
+    .about{
+        padding-bottom: 20px;
+    }
+    .title-bienvenue{
+        margin-top: 200px;
+        margin-right: 30px;
+        margin-bottom: 0;
+        font-family: 'krona one', sans-serif;
+        font-size: 35px;
+        text-align: center;
+    }
+    .img-about{
+        width: 450px;
+        height: 300px;
+        float: left;
+        clear: left;
+        margin: 20px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .para-about{
+        margin: 30px;
+        padding: 10px;
+        margin-right: 50px;
+        text-align:justify;
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 1600px){
+    .about{
+        padding-bottom: 50px;
+    }
+    .title-bienvenue{
+        margin-top: 200px;
+        font-family: 'krona one', sans-serif;
+        font-size: 40px;
+        margin-right: 300px;
+        text-align: right;
+    }
+    .img-about{
+        width: 500px;
+        height: 350px;
+        float: left;
+        clear: left;
+        margin: 20px;
+        margin-left: 200px;
+        margin-right: 50px;
+    }
+    .para-about{
+        margin: 50px;
+        padding: 10px;
+        margin-right: 100px;
+        text-align:justify;
+        font-size: 18px;
+    }
+}
 
 
 

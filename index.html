@@ -13,19 +13,42 @@
     <title>Garage V.Parrot</title>
 </head>
 <body>
-    <header class="header">
+    <header id="header" class="site-header fixed-on header-ficed" role="banner">
         <nav class="navbar">
-            <a href="index.html"><img src="Photos/Logo6 .png" alt="Logo" class="logo"></a>
-                <ul class="nav-list">
-                    <li><a href="véhiculesoccas.html">Nos véhicules d'occasions</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+            <div><img src="Photos/Logo6 .png" alt="Logo" class="logo"></div>
+            <div class="header-right-wrap">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="#lienservices">Nos prestations</a></li>
+                        <li><a href="véhiculesoccas.html">Nos véhicules d'occasions</a></li>
+                        <li><a href="contact.html">Nous contacter</a></li>
+                    </ul>
+            </div>
         </nav>
     </header>
     <main>
+        <section class="about">
+            <img src="photos/accueil.jpg" alt="accueil" class="img-about">
+            <h2 class="title-bienvenue">Bienvenue au garage V. Parrot ! </h2>
+
+            <p class="para-about">Je suis <strong>Vincent PARROT</strong>, fort de mes 15 années d'expériences dans 
+                la réparaton automobile, j'ai décidé d'ouvrir en 2021 mon propre garage ici à Toulouse, aux bord de la Garonne. 
+                <br>
+                <br>
+                Depuis maintenant 2 ans, le garage se spécialise dans la vente de véhicules d'occasions multimarques. 
+                Toute notre équipe vous accueille sur son parc d'exposition d'une quarantaine de voitures, 
+                afin de trouver le véhicule qui vous correspond le mieux. Par nos conseils et une recherche 
+                personnalisée, nous vous accompagnons dans votre projet d'achat, tout en respectant vos besoins 
+                et votre budget, selon le véhicule recherché.
+                <br>
+                <br>
+                Le maitre-mot de l'atelier est la <strong>qualité</strong>, mes employés et moi font tout notre possible
+                pour vous fournir un service de qualité et personnalisé selon vos besoins. 
+            </p>
+        </section>
         <section>
-        <section class="services">
-            <h1 class="title-service">Nos services</h1>
+        <div class="services" id="lienservices">
+            <h2 class="title-service">Nos prestations</h2>
 
             <div class="icones">
                 <a href="services.html"><img src="photos/icone-meca.png" class="icones-services"></a>
@@ -39,12 +62,12 @@
                 <p class="para-icones">La ventes de véhicules d'occasion</p>
                 <p class="para-icones">L'entretien</p>
             </div>
-        </section>    
-
-            <h2 class="title-services">Un professionalisme et un savoir faire d'une équipe à votre service</h2>
-            <section class="mecanique">
+            </div>    
+            <p class="title-services">Un professionalisme et un savoir faire d'une équipe à votre service !</p>
+            
+            <div class="mecanique">
                 <img src="photos/mecanique.jpg" class="photos-services">
-                <h2 class="h2title">Atelier de mécanique automobile</h2>
+                <h3 class="h2title">Atelier de mécanique automobile</h3>
     
                 <div class="para-services">
                     <p>Des techniciens qualifiés et régulièrement formés s’occupent de votre voiture au sein de nos ateliers pour toutes les interventions d’entretien courant.</p>
@@ -56,11 +79,11 @@
                         <li>Echappement</li>
                     </ul>
                 </div>
-            </section>
+            </div>
     
-            <section class="carrosserie">
+            <div class="carrosserie">
                 <img src="photos/carrosserie.jpeg" class="photos-services">
-                <h2 class="h2title">La carrosserie</h2>
+                <h3 class="h2title">La carrosserie</h3>
     
                 <div class="para-services">
                     <p>Qualifiés et expérimentés nos carrossiers-peintre disposent d'un outillage de pointe pour effectuer tous les travaux de tôlerie, carrosserie et peinture.</p>
@@ -71,11 +94,11 @@
                         <li>Vitres surteintés</li>
                     </ul>
                 </div>
-            </section>
+            </div>
             
-            <section class="entretien">
+            <div class="entretien">
                 <img src="photos/entretien.jpg" class="photos-services">
-                <h2 class="h2title">L'entretien</h2>
+                <h3 class="h2title">L'entretien</h3>
     
                 <div class="para-services">
                     <p>Nos techniciens qualifiés s’occupent de votre voiture pour toutes les interventions de maintenance.</p>
@@ -87,7 +110,7 @@
                         <li>Batterie</li>
                     </ul>
                 </div>
-            </section>
+            </div>
     
         </section>
 
@@ -96,11 +119,11 @@
         <div class="corps-footer">
             <div class="left">
             <p class="title-footer">Garage V.Parrot</p>
-            <p class="adresse-footer">6 Avenue de Lattre de Tassigny <br> 85110 Chantonnay</p>
+            <p class="adresse-footer">6 Avenue de Lattre de Tassigny <br> 31400 Toulouse</p>
             <p class="tel-footer"> 02 - 51 - 06 - 46 - 31</p>
             <p class="mail-footer">garage.vparrot@gmail.com</pclass>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2737.049883567334!2d-1.050945224421294!3d46.68501645116268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48068e0cc9c2e06d%3A0x9e82e702f7d82b5f!2s6%20Av.%20de%20Lattre%20de%20Tassigny%2C%2085110%20Chantonnay!5e0!3m2!1sfr!2sfr!4v1685553372928!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="iframes"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2890.252324114064!2d1.4352597753867067!3d43.580460357133624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebb8f58874789%3A0xe6426faf7d9c67e0!2s6%20Av.%20de%20Lattre%20de%20Tassigny%2C%2031400%20Toulouse!5e0!3m2!1sfr!2sfr!4v1686036150548!5m2!1sfr!2sfr"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="iframes"></iframe>
             <div class="right">
             <p class="horaire-footer">Horaires d'ouvertures</p>
             <p class="ltov">Lundi au vendredi <br> 08h00 - 12h30 <br> 14h30 - 18h30 <br></p>
