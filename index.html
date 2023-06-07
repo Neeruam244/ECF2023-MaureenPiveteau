@@ -115,8 +115,84 @@
         </section>
 
         <section>
-            <h2>Un professionenel de l'entretien automobile</h2>
-            
+            <h2 class="title-avis">Un professionenel de l'entretien automobile</h2>
+        
+        <div class="slide-avis">
+        <!--slideshow container-->    
+            <div class="slideshow-container">
+                <!--Full with slides/quotes-->
+                <div class="mySlides">
+                    <q>Très bon garage. Réparations rapide et de qualité. Equipe à l'écoute des clients.</q>  
+                    <p class="author">Sébastien REPEROT <img src="photos/avis 5 étoiles.png" width="120px" height="20px" class="stars"></p>
+                </div>
+
+                <div class="mySlides">
+                    <q>Un garage moins grand qu'une concession et pourtant un acceuil chaleureux, des véhicules à des prix corrects. Vincent est une personne accueillante et agréable.</q>  
+                    <p class="author">Matthieu MOURET <img src="photos/avis 5 étoiles.png" width="120px" height="20px" class="stars"></p>
+                </div>
+
+                <div class="mySlides">
+                    <q>Garage très professionnel et à l'écoute de ses clients</q>  
+                    <p class="author">Allan GAPORIT <img src="photos/avis 4 étoiles.png" width="120px" height="20px" class="stars"></p>
+                </div>
+
+                <div class="mySlides">
+                    <q>Accueil exemplaire, professionnels sérieux et honnêtes ! Je recommande fortement ce garage pour l'achat de véhicules d'occasion.</q>  
+                    <p class="author">Jonathan JUSPIN <img src="photos/avis 5 étoiles.png" width="120px" height="20px" class="stars"></p>
+                </div>
+
+                <div class="mySlides">
+                    <q>Super acceuil ! Professionnels sérieux et dynamiques. Le prix des prestations sont correts et les devis sont transmis avant chaque réparation pour ne pas avoir de surpise ! Très bonne équipe !</q>  
+                    <p class="author">Nicolas COUDRINO <img src="photos/avis 5 étoiles.png" width="120px" height="20px" class="stars"></p>
+                </div>
+
+                <div class="mySlides">
+                    <q>Très bien reçu, service au top ! Bon conseils et à l'écoute, je recommande. </q>  
+                    <p class="author">Caroline RAUTUREAU <img src="photos/avis 5 étoiles.png" width="120px" height="20px" class="stars"></p>
+                </div>
+
+                <!--Next/prev button-->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+            <!--Dots/bullets/indicators-->
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </div>    
+
+        <p class="para-avis">Votre passage chez nous s'est bien passé. <br> Laisser nous votre avis ! </p>
+
+        <aside>
+
+        </aside>
+
+        <form method="post" action=""></form>
+        <div class="body-form">
+            <div>
+                <div class="input-group">
+                    <input required="" type="text" name="text" autocomplete="off" class="input"> 
+                    <label class="user-label">Vote nom</label> 
+                </div>
+                
+                <div class="input-group">
+                    <textarea rows="7" cols="30" required="" type="text" name="text" autocomplete="off" class="input"></textarea>
+                      <label  class="user-label">Votre avis</label>
+                </div>
+
+
+                <div>
+                    <button type="submit" class="button">Envoyer !</button>  
+                </div>
+            </div>
+        </div>  
+    </form>
         </section>
     </main>
     <footer>
@@ -135,5 +211,6 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
