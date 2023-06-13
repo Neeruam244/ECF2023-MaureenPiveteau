@@ -507,7 +507,7 @@ footer{
     padding: 0 .2em;
     color: #ffb700;
 }
-button {
+.button1 {
     padding: 0.8em 1.8em;
     border: 2px solid #ffb700;
     position: relative;
@@ -524,7 +524,7 @@ button {
     margin-left: 100px;
 }
    
-button::before {
+.button1::before {
     content: '';
     width: 0;
     height: 300%;
@@ -538,16 +538,16 @@ button::before {
     z-index: -1;
 }
    
-button:hover::before {
+.button1:hover::before {
     width: 105%;
 }
-button:hover {
+.button1:hover {
     color: #111;
 }
 
 @media screen and (min-width: 768px){
     .title-contact{
-        padding-top: 200px;
+        padding-top: 50px;
         margin-left: 100px;
         margin-bottom: 0;
         font-family: 'krona one', sans-serif;
@@ -588,7 +588,7 @@ button:hover {
         display: flex;
         flex-direction: column;
     }
-    button {
+    .button1 {
         padding: 0.8em 1.8em;
         border: 2px solid #ffb700;
         position: relative;
@@ -601,13 +601,13 @@ button:hover {
         z-index: 1;
         font-family: inherit;
         color: #21211f;
-        margin: 10px;
+        margin: 20px;
         margin-left: 250px;
     }
 }
 @media screen and (min-width: 1600px){
     .title-contact{
-        padding-top: 200px;
+        padding-top: 50px;
         margin-left: 100px;
         margin-bottom: 0;
         font-family: 'krona one', sans-serif;
@@ -648,7 +648,7 @@ button:hover {
         display: flex;
         flex-direction: column;
     }
-    button {
+    .button1 {
         padding: 0.8em 1.8em;
         border: 2px solid #ffb700;
         position: relative;
@@ -664,6 +664,7 @@ button:hover {
         margin: 10px;
         margin-left: 350px;
     }
+
 }
 
 /*  --- AVIS DES CLIENTS ---    */
@@ -885,4 +886,204 @@ q {
     }
 }
 
- 
+/*  --- PAGE DES VEHICULES D'OCCASIONS---   */
+.title-car{
+    margin-top: 100px;
+    margin-bottom: 0;
+    font-family: 'krona one', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+.wrapper {
+    display: inline-block;
+    height: 300px;
+    width: 500px;
+    margin: 10px;
+    border-radius: 7px 7px 7px 7px;
+    /* VIA CSS MATIC https://goo.gl/cIbnS */
+    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  }
+.product-img {
+    float: left;
+    height: 300px;
+    width: 270px;
+}
+.product-img img {
+    border-radius: 7px 0 0 7px;
+}
+.img-card{
+    height:300px;
+    width: 280px;
+}
+.product-info {
+    float: left;
+    height: 300px;
+    width: 230px;
+    border-radius: 0 7px 10px 7px;
+    background-color: #21211f;
+}
+.product-text {
+    height: 270px;
+    width: 230px;
+}
+.title-card {
+    margin: 0 0 0 20px;
+    padding: 20px 0 5px 0;
+    font-size: 20px;
+    color: #fcfcf7;
+    font-family: 'Raleway', sans-serif;
+}
+.subtitle-card {
+    margin: 0 0 20px 20px;
+    font-size: 13px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #dee2e6;
+    letter-spacing: 0.2em;
+}
+.para-card {
+    height: 100px;
+    margin: 0 0 0 20px;
+    font-family: 'Raleway', sans-serif;
+    color: #fcfcf7;
+    line-height: 1.7em;
+    font-size: 15px;
+    overflow: hidden;
+}
+.price {
+    height: 50px;
+    font-family: 'barlow', serif;
+    margin: 0 0 0 75px;
+    font-size: 28px;
+    color: #fcfcf7;
+}
+.btn1 {
+    height: 50px;
+    width: 140px;
+    margin: 0 20px 0 50px;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 60px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #21211f;
+    background-color: #fcfcf7;
+}
+.outline {
+    background: transparent;
+    color: #fcfcf7;
+    border: 1px solid #fcfcf7;
+    transition: all .3s ease;  
+}
+.outline:hover{
+    transform: scale(1.125);
+    color: #ffb700;
+    border-color: #ffb700;
+    transition: all .3s ease;  
+}
+
+@media screen and (min-width: 768px){
+    .title-car{
+        margin-top: 200px;
+        margin-left: 100px;
+        margin-bottom: 0;
+        font-family: 'krona one', sans-serif;
+        font-size: 35px;
+        text-align: left;
+    }
+    .wrapper {
+        display: inline-block;
+        height: 400px;
+        width: 530px;
+        margin: 30px;
+        border-radius: 7px 7px 7px 7px;
+        /* VIA CSS MATIC https://goo.gl/cIbnS */
+        -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    }
+    .product-info {
+        float: left;
+        height: 400px;
+        width: 250px;
+        border-radius: 0 7px 10px 7px;
+        background-color: #21211f;
+    }
+    .product-text {
+        height: 300px;
+        width: 230px;
+    }
+    .product-img {
+        float: left;
+        height: 400px;
+        width: 280px;
+    }
+    .img-card{
+        height:400px;
+        width: 310px;
+    }
+    .title-card {
+        margin: 0 0 0 20px;
+        padding-top: 40px;
+        font-size: 20px;
+        color: #fcfcf7;
+        font-family: 'Raleway', sans-serif;
+    }
+    .subtitle-card {
+        margin: 0 0 40px 20px;
+        font-size: 13px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #dee2e6;
+        letter-spacing: 0.2em;
+    }
+    .para-card {
+        height: 125px;
+        margin: 0 0 0 20px;
+        font-family: 'Raleway', sans-serif;
+        color: #fcfcf7;
+        line-height: 1.7em;
+        font-size: 15px;
+        overflow: hidden;
+    }
+    .price {
+        height: 50px;
+        font-family: 'barlow', serif;
+        margin: 0 0 10px 75px;
+        font-size: 28px;
+        color: #fcfcf7;
+    }
+    .btn1 {
+        height: 50px;
+        width: 140px;
+        margin: 0 20px 0 50px;
+        box-sizing: border-box;
+        border: transparent;
+        border-radius: 60px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #21211f;
+        background-color: #fcfcf7;
+    }
+    .outline {
+        background: transparent;
+        color: #fcfcf7;
+        border: 1px solid #fcfcf7;
+        transition: all .3s ease;  
+    }
+    .outline:hover{
+        transform: scale(1.125);
+        color: #ffb700;
+        border-color: #ffb700;
+        transition: all .3s ease;  
+    }
+}
+
