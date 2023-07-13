@@ -2,7 +2,8 @@
 
 require_once __DIR__. "/lib/config.php";
 require_once __DIR__. "/lib/session.php";
-/*require_once __DIR__. "/lib/avis.php";*/
+require_once __DIR__. "/lib/service.php";
+require_once __DIR__. "/lib/avis.php";
 
 require_once __DIR__. "/templates/header.php"; 
 ?> 
@@ -51,108 +52,23 @@ require_once __DIR__. "/templates/header.php";
     </div>  
 
         <p class="title-services">Un professionalisme et un savoir faire d'une équipe à votre service !</p>
-            
-            <div class="mecanique">
-                <img src="uploads/services/mecanique.jpg" class="photos-services">
-                <h3 class="h2title">Atelier de mécanique automobile</h3>
-    
-                <div class="para-services">
-                    <p>Des techniciens qualifiés et régulièrement formés s’occupent de votre voiture au sein de nos ateliers pour toutes les interventions d’entretien courant.</p>
-                    <ul>
-                        <li>Diagnostique et recherche de panne électrique</li>
-                        <li>Préparartion au contrôle technique</li>
-                        <li>Pneumatiques</li>
-                        <li>Freinage</li>
-                        <li>Echappement</li>
-                    </ul>
-                </div>
-            </div>
-    
-            <div class="carrosserie">
-                <img src="uploads/services/carrosserie.jpeg" class="photos-services">
-                <h3 class="h2title">La carrosserie</h3>
-    
-                <div class="para-services">
-                    <p>Qualifiés et expérimentés nos carrossiers-peintre disposent d'un outillage de pointe pour effectuer tous les travaux de tôlerie, carrosserie et peinture.</p>
-                    <ul>
-                        <li>Débosselage sans peinture</li>
-                        <li>Toterie ou peinture</li>
-                        <li>Réparartion ou changement de parebrise</li>
-                        <li>Vitres surteintés</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="entretien">
-                <img src="uploads/services/entretien.jpg" class="photos-services">
-                <h3 class="h2title">L'entretien</h3>
-    
-                <div class="para-services">
-                    <p>Nos techniciens qualifiés s’occupent de votre voiture pour toutes les interventions de maintenance.</p>
-                    <ul>
-                        <li>Changement d'essuie-galce</li>
-                        <li>Eclairage</li>
-                        <li>Vidange</li>
-                        <li>Climatisation</li>
-                        <li>Batterie</li>
-                    </ul>
-            </div>
-    </div>
+
+        <?php $service = getServiceById($pdo, $id);  
+  
+            foreach ($services as $key => $service) { 
+            require __DIR__ . "/templates/services_part.php"; 
+        } ?>
     
 </section>
 
 <section>
     <h2 class="title-avis">Un professionenel de l'entretien automobile</h2>
-        
-        <div class="slide-avis">
-        <!--slideshow container-->    
-            <div class="slideshow-container">
-                <!--Full with slides and quotes-->
-                <div class="mySlides">
-                    <q>Très bon garage. Réparations rapide et de qualité. Equipe à l'écoute des clients.</q>  
-                    <p class="author">Sébastien REPEROT <img src="uploads/etoiles avis/5stars.png" width="120px" height="20px" class="stars"></p>
-                </div>
 
-                <div class="mySlides">
-                    <q>Un garage moins grand qu'une concession et pourtant un acceuil chaleureux, des véhicules à des prix corrects. Vincent est une personne accueillante et agréable.</q>  
-                    <p class="author">Matthieu MOURET <img src="uploads/etoiles avis/5stars.png" width="120px" height="20px" class="stars"></p>
-                </div>
-
-                <div class="mySlides">
-                    <q>Garage très professionnel et à l'écoute de ses clients</q>  
-                    <p class="author">Allan GAPORIT <img src="uploads/etoiles avis/4stars.png" width="120px" height="20px" class="stars"></p>
-                </div>
-
-                <div class="mySlides">
-                    <q>Accueil exemplaire, professionnels sérieux et honnêtes ! Je recommande fortement ce garage pour l'achat de véhicules d'occasion.</q>  
-                    <p class="author">Jonathan JUSPIN <img src="uploads/etoiles avis/5stars.png" width="120px" height="20px" class="stars"></p>
-                </div>
-
-                <div class="mySlides">
-                    <q>Super acceuil ! Professionnels sérieux et dynamiques. Le prix des prestations sont correts et les devis sont transmis avant chaque réparation pour ne pas avoir de surpise ! Très bonne équipe !</q>  
-                    <p class="author">Nicolas COUDRINO <img src="uploads/etoiles avis/5stars.png" width="120px" height="20px" class="stars"></p>
-                </div>
-
-                <div class="mySlides">
-                    <q>Très bien reçu, service au top ! Bon conseils et à l'écoute, je recommande. </q>  
-                    <p class="author">Caroline RAUTUREAU <img src="uploads/etoiles avis/5stars.png" width="120px" height="20px" class="stars"></p>
-                </div>
-
-                <!--Next/prev button-->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-
-            <!--Dots/bullets/indicators-->
-            <div class="dot-container">
-                <span class="dots" onclick="currentSlide(1)"></span>
-                <span class="dots" onclick="currentSlide(2)"></span>
-                <span class="dots" onclick="currentSlide(3)"></span>
-                <span class="dots" onclick="currentSlide(4)"></span>
-                <span class="dots" onclick="currentSlide(5)"></span>
-                <span class="dots" onclick="currentSlide(6)"></span>
-            </div>
-        </div>    
+        <?php $opinion = getOpinionById($pdo, $id);  
+  
+            foreach ($opinions as $key => $opinion) { 
+            require __DIR__ . "/templates/opinion_part.php"; 
+        } ?>
 
         <p class="para-avis">Votre passage chez nous s'est bien passé. <br> Laisser nous votre avis ! </p>
 
