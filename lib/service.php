@@ -10,13 +10,13 @@ try{
 
     // Exécutez vos requêtes SQL ici en utilisant PDO
 
-    function getServiceById(PDO $pdo, int $id):array|bool
+    function getServiceById(PDO $pdo, int $id)
     {
         $query = $pdo->prepare("SELECT * FROM services WHERE id = :id");
         $query->bindValue(":id", $id, PDO::PARAM_INT);
         $query->execute();
         return $query->fetch(PDO::FETCH_ASSOC);
-    }
+    };
 
     function saveService(PDO $pdo, string $title, string $content, string|null $picture, int $id = null):bool 
     {
@@ -32,7 +32,7 @@ try{
         $query->bindValue(':content', $content, $pdo::PARAM_STR);
         $query->bindValue(':picture',$picture, $pdo::PARAM_STR);
         return $query->execute();  
-    }
+    };
 
     function deleteService(PDO $pdo, int $id):bool
     {
@@ -46,7 +46,7 @@ try{
         } else {
             return false;
         }
-    }
+    };
 }
 catch (PDOException $e) {
     // Gestion des erreurs

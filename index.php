@@ -3,7 +3,7 @@
 require_once __DIR__. "/lib/config.php";
 require_once __DIR__. "/lib/session.php";
 require_once __DIR__. "/lib/service.php";
-require_once __DIR__. "/lib/avis.php";
+require_once __DIR__. "/lib/traitement_avis.php";
 
 require_once __DIR__. "/templates/header.php"; 
 ?> 
@@ -64,9 +64,9 @@ require_once __DIR__. "/templates/header.php";
 <section>
     <h2 class="title-avis">Un professionenel de l'entretien automobile</h2>
 
-        <?php $opinion = getOpinionById($pdo, $id);  
-  
-            foreach ($opinions as $key => $opinion) { 
+        <?php $publish_opinion = getPublish_OpinionById($pdo, $id);  
+
+            foreach ($publish_opinions as $key => $publish_opinion) { 
             require __DIR__ . "/templates/opinion_part.php"; 
         } ?>
 
@@ -76,16 +76,16 @@ require_once __DIR__. "/templates/header.php";
             <img src="assets/images/Votre avis nous intéresse.png">
         </aside>
 
-    <form method="post" action=""></form>
+    <form method="post" action="traitement_avis.php"></form>
         <div class="body-form">
             <div>
                 <div class="input-group">
-                    <input required="" type="text" name="text" autocomplete="off" class="input"> 
+                    <input required="" type="text" name="text" autocomplete="off" class="input" id="client_name"> 
                     <label class="user-label">Vote nom</label> 
                 </div>
                 
                 <div class="input-group">
-                    <textarea rows="7" cols="30" required="" type="text" name="text" autocomplete="off" class="input"></textarea>
+                    <textarea rows="7" cols="30" required="" type="text" name="text" autocomplete="off" class="input"id="opinion"></textarea>
                       <label  class="user-label">Votre avis</label>
                 </div>
 
@@ -113,7 +113,7 @@ require_once __DIR__. "/templates/header.php";
                 </div>
 
                 <div>
-                    <button type="submit" class="button1">Envoyer</button>  
+                    <input type="submit" class="button1" value="Envoyer">  
                 </div>
                 
             </div>
