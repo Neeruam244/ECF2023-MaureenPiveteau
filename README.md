@@ -14,12 +14,18 @@ Copier et coller
 
 Clique droit > Outils > SGBD par défaut My SQL > Inverser SGBD par défaut MySQL <-> MariaDB
 
-Cloner mon projet et enregistrer le dans le dossier ECF 2023
+Clôner mon projet et enregistrer le dans le dossier ECF 2023
 
 Clique droit sur l'icone dan la barre de tache > redémarer de zéro
 
 Cliquer sur l'icone WAMP qui est sur le bureau pour le lancer 
+
+Clique gauche > LocalHost > Vos Alias > PHPmyAdmin 
+Pour se connecter à PHPmyAdmin : Server MariaDB // username: root // password: > Se connecter 
+Dans l'onglet importer > importer le fichier de la base de donnée ecf.sql
+
 Clique gauche > LocalHost > Vos VirtualHost > garageECF.local
+
 
 Si tout est ok, l'application web devrait apparaitre. 
 
