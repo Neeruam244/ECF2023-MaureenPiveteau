@@ -22,3 +22,5 @@ Cliquer sur l'icone WAMP qui est sur le bureau pour le lancer
 Clique gauche > LocalHost > Vos VirtualHost > garageECF.local
 
 Si tout est ok, l'application web devrait apparaitre. 
+
+Voici la démarche à suivre pour la création d'un administrateur pour le back-office de l'application web. 
