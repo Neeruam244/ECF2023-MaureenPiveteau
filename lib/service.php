@@ -2,7 +2,7 @@
 
 try{
     // Connexion à la base de données MySQL via PDO
-    $pdo = new PDO('mysql:localhost;port=3306;dbname=ecf', 'root', ''); 
+    $pdo = new PDO('mysql:dbname="._DB_NAME_.";host=localhost', '_DB_USER_', '_DB_PASSWORD_'); 
 
     // Configurer le mode de gestion d'erreurs de PDO pour afficher les erreurs
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
@@ -16,7 +16,7 @@ try{
         $query->bindValue(":id", $id, PDO::PARAM_INT);
         $query->execute();
         return $query->fetch(PDO::FETCH_ASSOC);
-    };
+    }
 
     function saveService(PDO $pdo, string $title, string $content, string|null $picture, int $id = null):bool 
     {
@@ -32,7 +32,7 @@ try{
         $query->bindValue(':content', $content, $pdo::PARAM_STR);
         $query->bindValue(':picture',$picture, $pdo::PARAM_STR);
         return $query->execute();  
-    };
+    }
 
     function deleteService(PDO $pdo, int $id):bool
     {
@@ -46,7 +46,7 @@ try{
         } else {
             return false;
         }
-    };
+    }
 }
 catch (PDOException $e) {
     // Gestion des erreurs

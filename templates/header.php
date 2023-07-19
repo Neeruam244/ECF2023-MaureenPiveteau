@@ -19,10 +19,10 @@
             <div><img src="assets/images/Logo.png" alt="Logo" class="logo"></div>
             <div class="header-right-wrap">
                     <ul class="nav-list">
-                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="index.php">Accueil</a></li>
                         <li><a href="#lienservices">Nos prestations</a></li>
-                        <li><a href="voitoccas.html">Nos véhicules d'occasions</a></li>
-                        <li><a href="contact.html">Nous contacter</a></li>
+                        <li><a href="voitoccasion.php">Nos véhicules d'occasions</a></li>
+                        <li><a href="contact.php">Nous contacter</a></li>
                     </ul>
             </div>
         </nav>

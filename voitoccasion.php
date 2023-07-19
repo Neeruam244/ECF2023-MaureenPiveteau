@@ -5,12 +5,9 @@ require_once __DIR__. "/templates/header.php";
 
 <!-- page de la liste des véhicules d'occasions -->
 
-<?php foreach ($car as $key => $cars) {?>
-
 <h2 class="title-car">Nos voitures d'occasions</h2>
 
 <!-- Les différents filtres -->
-
 <div class="filter">
   <div class="type-filter">
     <label for="price-select" class="title-filter">Prix :</label>
@@ -48,11 +45,15 @@ require_once __DIR__. "/templates/header.php";
 </div>
 
 <!-- La card des voitures d'occasion -->
+<?php 
+ $car = getCarsById($pdo, $id);
+ foreach ($cars as $key => $car) {
+?>
 
 <section class="container">
 <div class="wrapper">
     <div class="product-img">
-      <img src="photos/véhicules d'occasions/clio4/clio3.jpg" class="img-card">
+      <img src="<?= $car["image"]?>" class="img-card">
     </div>
     <div class="product-info">
       <div class="product-text">

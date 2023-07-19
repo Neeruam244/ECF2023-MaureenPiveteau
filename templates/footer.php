@@ -31,7 +31,5 @@ require_once __DIR__. "/lib/planning.php";
     </footer>
     <script src="/assets/JavaScript/slideavis.js"></script>
     <script src="/assets/JavaScript/Slideimg.js"></script>
-    <script src="/assets/JavaScript/filtre.js"></script>
-    <script src="/assets/JavaScript/form.js"></script>
 </body>
 </html>

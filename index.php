@@ -1,11 +1,11 @@
 <?php 
 
-require_once __DIR__. "/lib/config.php";
-require_once __DIR__. "/lib/session.php";
-require_once __DIR__. "/lib/service.php";
-require_once __DIR__. "/lib/traitement_avis.php";
+require_once __DIR__ . "/lib/config.php";
+require_once __DIR__ . "/lib/session.php";
+require_once __DIR__ . "/lib/service.php";
+require_once __DIR__ . "/lib/traitement_avis.php";
 
-require_once __DIR__. "/templates/header.php"; 
+require_once __DIR__ . "/templates/header.php"; 
 ?> 
 
 
@@ -64,11 +64,43 @@ require_once __DIR__. "/templates/header.php";
 <section>
     <h2 class="title-avis">Un professionenel de l'entretien automobile</h2>
 
-        <?php $publish_opinion = getPublish_OpinionById($pdo, $id);  
+        <?php $opinion = getOpinionById($pdo, $id);  
 
-            foreach ($publish_opinions as $key => $publish_opinion) { 
-            require __DIR__ . "/templates/opinion_part.php"; 
-        } ?>
+            foreach ($opinions as $key => $opinion) { 
+                
+                if ($opinion["imgNote"] === null) {
+                    $imagePath =  _STARS_IMAGES_FOLDER_."default-stars.jpg";
+                } else {
+                    $imagePath =  _STARS_IMAGES_FOLDER_.$opinion["imgNote"];
+                }
+            ?>
+            
+            <div class="slide-avis">
+                    <!--slideshow container-->    
+                        <div class="slideshow-container">
+                            <!--Full with slides and quotes-->
+                            <div class="mySlides">
+                                <q><?=$opinion["opinion"]?></q>  
+                                <p class="author"><?=$opinion["client_name"]?><img src="<?=$imagePath ?>" width="120px" height="20px" class="stars"></p>
+                            </div>
+            
+                            <!--Next/prev button-->
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </div>
+            
+                        <!--Dots/bullets/indicators-->
+                        <div class="dot-container">
+                            <span class="dots" onclick="currentSlide(1)"></span>
+                            <span class="dots" onclick="currentSlide(2)"></span>
+                            <span class="dots" onclick="currentSlide(3)"></span>
+                            <span class="dots" onclick="currentSlide(4)"></span>
+                            <span class="dots" onclick="currentSlide(5)"></span>
+                            <span class="dots" onclick="currentSlide(6)"></span>
+                        </div>
+            </div>  
+            
+        <?php } ?>
 
         <p class="para-avis">Votre passage chez nous s'est bien passé. <br> Laisser nous votre avis ! </p>
 
@@ -119,6 +151,6 @@ require_once __DIR__. "/templates/header.php";
             </div>
         </div>  
     </form>
-</section>
+</section>  
 
 <?php require_once __DIR__ ."/templates/footer.php";  ?>

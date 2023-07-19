@@ -20,7 +20,7 @@ function adminOnly() {
 }
 
 function employeeOnly() {
-    if (!isset($_SESSION['user']) || $_SESSION['user']['role'] != 'employe') {
+    if (!isset($_SESSION['user']) || $_SESSION['user']['role'] != 'employé') {
         // Rediriger vers la page de connexion
         header("Location: ../login.php");
         exit();

@@ -2,7 +2,7 @@
 
 try{
     // Connexion à la base de données MySQL via PDO
-    $pdo = new PDO('mysql:localhost;port=3306;dbname=ecf', 'root', ''); 
+    $pdo = new PDO('mysql:dbname="._DB_NAME_.";host=localhost', '_DB_USER_', '_DB_PASSWORD_'); 
 
     // Configurer le mode de gestion d'erreurs de PDO pour afficher les erreurs
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);

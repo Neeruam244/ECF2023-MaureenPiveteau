@@ -2,46 +2,21 @@
 
 try{
  // Connexion à la base de données MySQL via PDO
-    $pdo = new PDO('mysql:localhost;port=3306;dbname=ecf', 'root', ''); 
+    $pdo = new PDO('mysql:dbname="._DB_NAME_.";host=localhost', '_DB_USER_', '_DB_PASSWORD_'); 
 
  // Configurer le mode de gestion d'erreurs de PDO pour afficher les erreurs
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // ERRMODE_WARNING | ERRMODE_EXCEPTION | ERRMODE_SILENT
 
-// Vérifier la connexion
-    if (!$pdo) {
-        die('Erreur de connexion à la base de données : ' . mysqli_connect_error());
-    };
-
 // Exécutez vos requêtes SQL ici en utilisant PDO
 
-    function getPublish_OpinionById(PDO $pdo, int $id):array|bool
+    function getOpinionById(PDO $pdo, int $id):array|bool
     {
         $query = $pdo->prepare("SELECT * FROM publish_opinion WHERE id = :id");
         $query->bindValue(':id', $id, PDO::PARAM_INT);
         $query->execute();
         return $query->fetch(PDO::FETCH_ASSOC);
-    };
-
-// Ajouter des avis
-    function createOpinion(PDO $pdo, int $id, string $client_name, string $opinion, string $imgNote ):bool 
-    {
-        $query = $pdo->prepare("INSERT INTO opinions (client_name, opinion, imgNote) VALUES (:client_name, :opinion, :imgNote)");  
-        $query->bindValue(':id', $id, $pdo::PARAM_INT);
-        $query->bindValue(':client_name', $client_name, $pdo::PARAM_STR);
-        $query->bindValue(':opinion', $opinion, $pdo::PARAM_STR);
-        $query->bindValue(':imgNote',$imgNote, $pdo::PARAM_STR);
-        return $query->execute();  
-    };
-
-// Modifier les avis existants
-function updateOpinion(PDO $pdo, int $id, string $opinion):bool 
-    {
-        $query = $pdo->prepare("UPDATE opinions (opinion) VALUES (:opinion)");  
-        $query->bindValue(':id', $id, $pdo::PARAM_INT);
-        $query->bindValue(':opinion', $opinion, $pdo::PARAM_STR);
-        return $query->execute();  
-    };
+    }
 
 // Publier des avis
     function publishOpinion(PDO $pdo, string $client_name)
@@ -66,6 +41,26 @@ function updateOpinion(PDO $pdo, int $id, string $opinion):bool
         } else {
             echo "Avis introuvable.";
         }
+    }
+
+// Ajouter des avis
+    function createOpinion(PDO $pdo, int $id, string $client_name, string $opinion, string $imgNote ):bool 
+    {
+        $query = $pdo->prepare("INSERT INTO opinions (client_name, opinion, imgNote) VALUES (:client_name, :opinion, :imgNote)");  
+        $query->bindValue(':id', $id, $pdo::PARAM_INT);
+        $query->bindValue(':client_name', $client_name, $pdo::PARAM_STR);
+        $query->bindValue(':opinion', $opinion, $pdo::PARAM_STR);
+        $query->bindValue(':imgNote',$imgNote, $pdo::PARAM_STR);
+        return $query->execute();  
+    }
+
+// Modifier les avis existants
+function updateOpinion(PDO $pdo, int $id, string $opinion):bool 
+    {
+        $query = $pdo->prepare("UPDATE opinions (opinion) VALUES (:opinion)");  
+        $query->bindValue(':id', $id, $pdo::PARAM_INT);
+        $query->bindValue(':opinion', $opinion, $pdo::PARAM_STR);
+        return $query->execute();  
     }
 }
 catch (PDOException $e) {

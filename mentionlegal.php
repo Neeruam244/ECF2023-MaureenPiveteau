@@ -9,7 +9,7 @@
     <strong>Créateur :</strong> Vincent Parrot <br>
     <strong>Responsable publication :</strong> Vincent Parrot. Le responsable publication est une personne physique ou une personne morale. <br>
     <strong>Conception :</strong> Maureen Piveteau - STUDI <br>
-    <strong>Hébergeur :</strong> xx - xx - 31400 TOULOUSE - France <br>
+    <strong>Hébergeur :</strong> HEROKU <br>
     Les mentions légales ont été générées et offertes par Subdelirium Mentions légales</p>
     
 

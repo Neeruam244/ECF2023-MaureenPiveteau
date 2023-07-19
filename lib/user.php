@@ -1,13 +1,13 @@
 <?php
 
-function addUser(PDO $pdo, string $name, string $surname, string $email, string $password, $role = "user") {
-    $sql = "INSERT INTO `users` (`name`, `surname`, `email`, `password`, `role`) VALUES (:name, :surname; :email, :password, :role);";
+function addUser(PDO $pdo, string $last_name, string $first_name, string $email, string $password, $role = "user") {
+    $sql = "INSERT INTO `users` (`last_name`, `first_name`, `email`, `password`, `role`) VALUES (:last_name, :first_name; :email, :password, :role);";
     $query = $pdo->prepare($sql);
 
     $password = password_hash($password, PASSWORD_BCRYPT);
 
-    $query->bindParam(':username', $name, PDO::PARAM_STR);
-    $query->bindParam(':username', $surname, PDO::PARAM_STR);
+    $query->bindParam(':lastname', $last_name, PDO::PARAM_STR);
+    $query->bindParam(':firstname', $first_name, PDO::PARAM_STR);
     $query->bindParam(':email', $email, PDO::PARAM_STR);
     $query->bindParam(':password', $password, PDO::PARAM_STR);
     $query->bindParam(':role', $role, PDO::PARAM_STR);

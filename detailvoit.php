@@ -1,27 +1,12 @@
 <?php
-require_once __DIR__. "/lib/pdo.php";
-require_once __DIR__. "/lib/voitoccas.php";
+require_once __DIR__. "/lib/car.php";
 require_once __DIR__. "/templates/header.php"; 
-
-
-$error = false;
-if(isset($_GET['id'])) { // est ce que je reçoit bien un id en paramètre 
-	$id = $_GET['id']; // oui et je le stock 
-
-    $car = getCars($pdo); // j’appelle ma fonction qui est sensé appelé une voiture
-
-	if (!$car){ // si j’en ai pas 
-		$error= true; // error
-	} else {
-        $error = true; //sinon error
-}}
-
-
-If(!$error){
+$car = getCarsById($pdo, $id);
     
 ?>
 
 <div class="corps-presentation">
+    <?php  foreach ($cars as $key => $car){?>
                 <div class="gauche">
                     <h2 class="title-model"><?= $car["brand"]["model"]?></h2>
                     <p class="subtitle-model"><?= $car["description"]?></p>
@@ -148,13 +133,9 @@ If(!$error){
                     </tbody>
                 </table>
             </div>
-
+    <?php } ?> 
             <div class="pourcontact">
                 <a href="contact.html"><p>Pour plus de renseignements, cliquer ici !</p></a>
             </div>
-
-<?php } else { ?> 
-    <h1>Page introuvable</h1> 
-<?php } ?>
 
 <?php require_once __DIR__ ."/templates/footer.php";  ?>
